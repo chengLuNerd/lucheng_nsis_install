@@ -7,7 +7,7 @@ InstallDir $DESKTOP\Example1 ;default install directory
 ; MUI settings 
 !define MUI_ICON "favicon.ico"
 !define MUI_HEADERIMAGE_BITMAP "head.png" ;if not define this, it will show MUI_ICON
-!define MUI_WELCOMEFINISHPAGE_BITMAP "welcome.jpg"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "welcome.bmp"
 !define MUI_LICENSEPAGE_CHECKBOX
 
 ; Pages
