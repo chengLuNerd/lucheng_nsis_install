@@ -25,8 +25,23 @@ InstallDir $DESKTOP\Example1 ;default install directory
 
 
 ; The stuff to install
-Section ""
+Section "PLB Section" PlbSection
   AddSize 500
   SetOutPath $INSTDIR
   File Demo.nsi
 SectionEnd
+
+Section "APP Section" AppSection
+  AddSize 200
+  SetOutPath $INSTDIR
+  File License.txt
+SectionEnd
+
+;Descriptions
+LangString DESC_SecPLB ${LANG_ENGLISH} "A plb section."
+LangString DESC_SecAPP ${LANG_ENGLISH} "A app section."
+
+!insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
+   !insertmacro MUI_DESCRIPTION_TEXT ${PlbSection} $(DESC_SecPLB)
+   !insertmacro MUI_DESCRIPTION_TEXT ${AppSection} $(DESC_SecAPP)
+!insertmacro MUI_FUNCTION_DESCRIPTION_END
